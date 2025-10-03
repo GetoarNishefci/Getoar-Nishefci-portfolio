@@ -8,7 +8,7 @@ const Header = () =>{
         <header className="py-8 xl:py-12">
             <div className="container mx-auto flex justify-between items-center">
                 <Link href='/'>
-                        <h1 className="text-4xl font-semibold">
+                        <h1 className="text-4xl font-semibold ml-5 xl:ml-0">
                             Getoar<span className="text-sky-500">.</span>
                             </h1>                
                            </Link>
@@ -23,7 +23,7 @@ const Header = () =>{
                 </div>
 
                 {/*Mobile */}
-                <div className="xl:hidden">
+                <div className="xl:hidden mr-5 xl:mr-0">
                         <MobileNav/>
                 </div>
             </div>
