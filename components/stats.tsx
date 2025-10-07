@@ -3,15 +3,15 @@
 
  const stats = [
     {
-        num:12,
+        num:3,
         label:"Years of Experience"
     }
     ,{
-        num:50,
+        num:4,
         label:"Projects Completed"
     }
     ,{
-        num:8,
+        num:11,
         label:"Technologies I Work With"
     }
 ]

@@ -17,7 +17,7 @@ const PageTransition:React.FC<PageTransitionProps> = ({children}) =>{
             <div key={pathName}>
                 <motion.div
                 initial={{opacity:1}}
-                animate={{opacity:0,transition:{delay:1,duration:0.4,ease:"easeInOut"}}}
+                animate={{opacity:0,transition:{delay:2,duration:0.4,ease:"easeInOut"}}}
                 className="h-screen w-screen fixed bg-white top-0 pointer-events-none"
                 />
             </div>

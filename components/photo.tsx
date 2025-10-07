@@ -9,7 +9,7 @@ export const Photo = () => {
  <motion.div
   className="absolute w-full h-full"
   initial={{ opacity:0 }}
-  animate={{ opacity:1, transition: {delay:1,duration:0.4,ease:"easeInOut"} }}
+  animate={{ opacity:1, transition: {delay:2,duration:0.4,ease:"easeIn"} }}
 >
   <svg
     className="w-full h-full"
@@ -40,16 +40,21 @@ export const Photo = () => {
 
 
 
-<div className="relative w-[200px] h-[200px] xl:w-[360px] xl:h-[350px] translate-y-3 xl:translate-y-2 rounded-full overflow-hidden mix-blend-lighten">
-          <Image
-    src="/assets/IMG_2016.png"
-    priority
-    quality={100}
-    fill
-    alt=""
-    className="object-cover"
-        />
-        </div>
+<motion.div
+   initial={{ opacity:0 }}
+  animate={{ opacity:1, transition: {delay:2,duration:0.4,ease:"easeIn"} }}
+>
+  <div className="relative w-[200px] h-[200px] xl:w-[360px] xl:h-[350px] translate-y-3 xl:translate-y-2 rounded-full overflow-hidden mix-blend-lighten">
+    <Image
+      src="/assets/IMG_2016.png"
+      priority
+      quality={100}
+      fill
+      alt=""
+      className="object-cover"
+    />
+  </div>
+</motion.div>
       </div>
     </div>
   );

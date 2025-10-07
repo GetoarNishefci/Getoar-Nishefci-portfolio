@@ -1,7 +1,7 @@
 "use client"
 
 import {FaHtml5,FaCss3,FaJs,FaReact,FaNodeJs} from "react-icons/fa";
-import {  SiNextdotjs, SiPostgresql,SiTailwindcss,SiMysql } from "react-icons/si";
+import {  SiNextdotjs, SiPostgresql,SiTailwindcss,SiMysql,SiGraphql,SiTypescript,} from "react-icons/si";
 import { motion} from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -9,7 +9,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
     const about = {
         title:"About Me",
-        description:"I am a software developer with a passion for building web applications. I have experience working with a variety of technologies including HTML, CSS, JavaScript, React, Next.js, Node.js, PostgreSQL, and Tailwind CSS. I am always looking to learn new technologies and improve my skills.",
+        description:"I am Getoar Nishefci, a Software Developer with 3 years of experience in building and maintaining web applications. Skilled in React, Next.js, Node.js, GraphQL, Prisma, and SQL databases (MySQL & PostgreSQL), with a strong focus on writing clean, scalable, and maintainable code.",
         info:[
             {name:"Name", value:"Getoar Nishefci"},
             {name:"Phone", value:"+383 44 170 067"},
@@ -22,8 +22,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
     const experiences = {
                 title:"My Experience",
-        description:"I am a software developer with a passion for building web applications. I have experience working with a variety of technologies including HTML, CSS, JavaScript, React, Next.js, Node.js, PostgreSQL, and Tailwind CSS. I am always looking to learn new technologies and improve my skills.",
-        items:[
+    description: "Worked extensively with React, Next.js, GraphQL, Prisma, Node.js, MySQL, and PostgreSQL, building scalable front-end and back-end solutions. Built and optimized reusable components, custom hooks, and helper functions. Implemented bridge APIs and middleware interceptors to streamline integrations. Wrote end-to-end tests with Playwright, participated in code reviews, and mentored interns.",
+                items:[
             {
                 company:"Pabau Clinic Software",
                 position:"Full Stack Developer",
@@ -34,7 +34,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
     const education = {
         title:"My Education",
-        description:"I am a software developer with a passion for building web applications. I have experience working with a variety of technologies including HTML, CSS, JavaScript, React, Next.js, Node.js, PostgreSQL, and Tailwind CSS. I am always looking to learn new technologies and improve my skills.",
+        description:"Computer Science with a focus on software engineering, algorithms, database systems, mathematics, and application development. Developing both theoretical knowledge and practical skills in designing and building software solutions.",
         items:[
             {
                 institution:"UBT College Higher Education Institution",
@@ -50,16 +50,18 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
     }
     const skills = {
         title:"My Skills",
-        description:"I am a software developer with a passion for building web applications. I have experience working with a variety of technologies including HTML, CSS, JavaScript, React, Next.js, Node.js, PostgreSQL, and Tailwind CSS. I am always looking to learn new technologies and improve my skills.",
+        description:"Skilled in React, Next.js, Node.js, GraphQL, Prisma, and SQL databases (MySQL & PostgreSQL), with a strong focus on writing clean, scalable, and maintainable code.",
         items:[
             {name:"HTML", icon:<FaHtml5 />},
             {name:"CSS", icon:<FaCss3 />},
             {name:"JavaScript", icon:<FaJs />},
+            {name:"Typescript", icon:<SiTypescript />},
             {name:"React", icon:<FaReact />},
             {name:"Next.js", icon:<SiNextdotjs />},
             {name:"Node.js", icon:<FaNodeJs />},
             {name:"PostgreSQL", icon:<SiPostgresql />},
             {name:"MySQL", icon:<SiMysql />},       
+            {name:"Graphql", icon:<SiGraphql />},       
             {name:"Tailwind CSS", icon:<SiTailwindcss />},
         ]
     }
