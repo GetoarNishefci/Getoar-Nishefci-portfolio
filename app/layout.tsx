@@ -12,7 +12,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Getoar Nisheci",
+  title: "Getoar Nishefci",
   description: "Getoar Nisheci Portfolio",
 };
 
