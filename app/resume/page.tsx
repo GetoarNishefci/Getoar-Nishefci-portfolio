@@ -1,6 +1,5 @@
 "use client"
 
-import { it } from "node:test";
 import {FaHtml5,FaCss3,FaJs,FaReact,FaNodeJs} from "react-icons/fa";
 import {  SiNextdotjs, SiPostgresql,SiTailwindcss,SiMysql } from "react-icons/si";
 import { motion} from "framer-motion";
