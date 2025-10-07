@@ -8,8 +8,8 @@
     }
 
      const socials = [
-        {icon: <FaGithub />, path:""},
-        {icon: <FaLinkedinIn />, path:""}
+        {icon: <FaGithub />, path:"https://github.com/GetoarNishefci"},
+        {icon: <FaLinkedinIn />, path:"https://www.linkedin.com/in/getoar-nishefci-919072257/"}
      ]
 
         export const Socials:React.FC<SocialsProps> = ({containerStyles,iconStyles}) => {

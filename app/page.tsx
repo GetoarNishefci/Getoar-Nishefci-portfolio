@@ -1,3 +1,5 @@
+"use client"
+
 import { Photo } from "@/components/photo";
 import { Socials } from "@/components/socials";
 import { Stats } from "@/components/stats";
@@ -5,6 +7,14 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
+
+   const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/Getoar Nishefci_CV.pdf";
+    link.download = "Getoar-Nishefci-CV.pdf";
+    link.click();
+  };
+
   return (
   <section className="h-full">
     <div className="container mx-auto h-full">
@@ -18,7 +28,7 @@ export default function Home() {
             I am a software developer with a passion for building web applications.
           </p>
           <div className="flex flex-col xl:flex-row items-center gap-8">
-            <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+            <Button variant="outline" size="lg" className="uppercase flex items-center gap-2" onClick={()=>handleDownloadCV()}>
               <span>Download CV</span>
               <FiDownload className="text-xl"/>
             </Button>
