@@ -10,7 +10,7 @@ export default function Home() {
 
    const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Getoar Nishefci_CV.pdf";
+    link.href = "/Getoar_Nishefci_CV.pdf";
     link.download = "Getoar-Nishefci-CV.pdf";
     link.click();
   };
