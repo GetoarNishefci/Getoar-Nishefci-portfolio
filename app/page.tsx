@@ -10,8 +10,8 @@ export default function Home() {
 
    const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Getoar_Nishefci_CV.pdf";
-    link.download = "Getoar-Nishefci-CV.pdf";
+    link.href = "/GetoarNishefciCV.pdf";
+    link.download = "GetoarNishefciCV.pdf";
     link.click();
   };
 
@@ -20,12 +20,12 @@ export default function Home() {
     <div className="container mx-auto h-full">
       <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
         <div className="text-center xl:text-left order-2 xl:order-none">
-          <span className="text-xl">Software Developer</span>
+          <span className="text-xl">Full Stack Developer</span>
           <h1 className="text-[48px] xl:text-[80px] leading-[1.1] font-semibold mb-6">
           {"Hi,I'm"} <br /><span className="text-sky-500">Getoar Nishefci</span>
           </h1>
           <p className="max-w-[500px] mb-9 text-black/80">
-            I am a software developer with a passion for building web applications.
+            I am a Full Stack Developer with 3+ years of experience building web applications with Angular, React, Next.js, Node.js, and AWS.
           </p>
           <div className="flex flex-col xl:flex-row items-center gap-8">
             <Button variant="outline" size="lg" className="uppercase flex items-center gap-2" onClick={()=>handleDownloadCV()}>

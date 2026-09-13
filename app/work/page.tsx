@@ -14,6 +14,26 @@ import WorkSliderBtns from "@/components/workSlider";
 const projects = [
     {
         num:"01",
+        category:"Full Stack",
+        title:"MKY Treuhandpartner GmbH",
+        description:"Full Stack Developer building and redesigning internal applications with Angular, Node.js, REST APIs, MongoDB, and AWS. Implemented AWS Textract/OCR invoice processing, restructured role and permission management, delivered invoice generation and setup, and developed backend APIs and integrations.",
+        stack:[{name:"Angular"},{name:"Node.js"},{name:"REST APIs"},{name:"MongoDB"},{name:"AWS"},{name:"OCR / Textract"}],
+        image:"/assets/work/Screenshot 2026-09-13 173614.png",
+        live:"https://money-key.ch/en",
+        github:""
+    },
+     {
+        num:"02",
+        category:"Full Stack",
+        title:"Pabau Clinic Software",
+        description:"Full Stack Developer at Pabau Clinic Software, building scalable healthcare solutions using React, Next.js, Node.js, and SQL databases. Developed reusable components, implemented bridge APIs and middleware, wrote end-to-end tests with Playwright, participated in code reviews, and mentored interns to support team growth and maintain high code quality standards.",
+        stack:[{name:"Next.js"},{name:"React"},{name:"Node.js"},{name:"Prisma"},{name:"PostgreSQL"},{name:"MySQL"},{name:"GraphQL"},{name:"CSS"}],
+        image:'/assets/work/1ba17212-d415-45bf-96e6-dc4b76ce5891.jpg',
+        live:"https://pabau.com/",
+        github:"/"
+    },
+    {
+        num:"03",
         category:"Full Stack Project",
         title:"E-Commerce Store",
         description:"Full-stack developer who built a complete e-commerce store using Next.js, React, Tailwind CSS, Prisma, and PostgreSQL. Developed responsive user interfaces, managed server-side rendering, handled database operations, and implemented secure payment integrations to deliver a seamless shopping experience.",
@@ -23,7 +43,7 @@ const projects = [
         github:"https://github.com/GetoarNishefci/e-commerce-store"
     },
      {
-        num:"02",
+        num:"04",
         category:"Full Stack Project",
         title:"E-Commerce Admin Dashboard",
         description:"Full-stack developer who built a comprehensive admin dashboard using Next.js, React, Tailwind CSS, Prisma, and PostgreSQL. Developed complete product management system including creating products, categories, billboards, colors, and photo sizes. Implemented order monitoring and management features to track and process customer orders efficiently.",
@@ -31,16 +51,6 @@ const projects = [
         image:'/assets/work/Gray Simple Shapes Blank A4 Document Landscape.png',
         live:"https://e-commerce-psi-blue.vercel.app/",
         github:"https://github.com/GetoarNishefci/e-commerce"
-    },
-       {
-        num:"03",
-        category:"Full Stack",
-        title:"Pabau Clinic Software",
-        description:"Full Stack Developer at Pabau Clinic Software, building scalable healthcare solutions using React, Next.js, Node.js, and SQL databases. Developed reusable components, implemented bridge APIs and middleware, wrote end-to-end tests with Playwright, participated in code reviews, and mentored interns to support team growth and maintain high code quality standards.",
-        stack:[{name:"Next.js"},{name:"React"},{name:"Node.js"},{name:"Prisma"},{name:"PostgreSQL"},{name:"MySQL"},{name:"GraphQL"},{name:"CSS"}],
-        image:'/assets/work/1ba17212-d415-45bf-96e6-dc4b76ce5891.jpg',
-        live:"https://pabau.com/",
-        github:"/"
     },
 ]
 
@@ -85,6 +95,7 @@ setProject(projects[currentIndex]);
 
                 <div className="border border-black/20"></div>
                 <div className="flex items-center gap-4">
+                    {project.live && project.live !== "/" && (
                     <Link href={project.live}>
                     <TooltipProvider delayDuration={100}>
                         <Tooltip>
@@ -97,6 +108,8 @@ setProject(projects[currentIndex]);
                         </Tooltip>
                     </TooltipProvider>
                     </Link>
+                    )}
+                     {project.github && project.github !== "/" && (
                      <Link href={project.github}>
                     <TooltipProvider delayDuration={100}>
                         <Tooltip>
@@ -109,6 +122,7 @@ setProject(projects[currentIndex]);
                         </Tooltip>
                     </TooltipProvider>
                     </Link>
+                    )}
                 </div>
 
                         </div>
@@ -120,7 +134,15 @@ setProject(projects[currentIndex]);
                                 return(
                                     <SwiperSlide key={index} className="w-full"><div className="h-[460px]  relative group flex justify-center items-center bg-sky-50">
                                         <div className="relative w-full h-full">
-                                        <Image src={item.image} fill className="object-cover" alt=""/>
+                                        {item.image ? (
+                                        <Image src={item.image} fill className="object-cover" alt={item.title}/>
+                                        ) : (
+                                        <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-8 text-center">
+                                            <span className="text-sky-500 text-sm uppercase tracking-[4px]">Current Role</span>
+                                            <h3 className="text-3xl font-bold">{item.title}</h3>
+                                            <p className="text-black/60 max-w-[360px]">Angular · Node.js · MongoDB · AWS · REST APIs</p>
+                                        </div>
+                                        )}
                                         </div>
                                         </div></SwiperSlide>
                                 )

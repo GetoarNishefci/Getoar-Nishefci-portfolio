@@ -1,7 +1,7 @@
 "use client"
 
-import {FaHtml5,FaCss3,FaJs,FaReact,FaNodeJs} from "react-icons/fa";
-import {  SiNextdotjs, SiPostgresql,SiTailwindcss,SiMysql,SiGraphql,SiTypescript,} from "react-icons/si";
+import {FaHtml5,FaCss3,FaJs,FaReact,FaNodeJs,FaAws} from "react-icons/fa";
+import {  SiNextdotjs, SiPostgresql,SiTailwindcss,SiMysql,SiGraphql,SiTypescript,SiMongodb,SiAngular,} from "react-icons/si";
 import { motion} from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -9,11 +9,11 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
     const about = {
         title:"About Me",
-        description:"I am Getoar Nishefci, a Software Developer with 3 years of experience in building and maintaining web applications. Skilled in React, Next.js, Node.js, GraphQL, Prisma, and SQL databases (MySQL & PostgreSQL), with a strong focus on writing clean, scalable, and maintainable code.",
+        description:"I am Getoar Nishefci, a Full Stack Developer with 3+ years of experience building and maintaining production web applications. Skilled in Angular, React, Next.js, Node.js, REST APIs, GraphQL, Prisma, MongoDB, SQL databases (MySQL & PostgreSQL), and AWS, with a strong focus on clean, scalable, and maintainable code.",
         info:[
             {name:"Name", value:"Getoar Nishefci"},
             {name:"Phone", value:"+383 44 170 067"},
-            {name:"Experience", value:"3 Years"},
+            {name:"Experience", value:"3+ Years"},
             {name:"Nationality", value:"Albanian"},
             {name:"Email", value:"getoar.n1@gmail.com"},
             {name:"Languages", value:"Albanian, English"},
@@ -22,12 +22,31 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
     const experiences = {
                 title:"My Experience",
-    description: "Worked extensively with React, Next.js, GraphQL, Prisma, Node.js, MySQL, and PostgreSQL, building scalable front-end and back-end solutions. Built and optimized reusable components, custom hooks, and helper functions. Implemented bridge APIs and middleware interceptors to streamline integrations. Wrote end-to-end tests with Playwright, participated in code reviews, and mentored interns.",
+    description: "Full Stack Developer with 3+ years of experience delivering production applications across Angular, React, Next.js, Node.js, REST APIs, MongoDB, SQL databases, and AWS. Currently building financial workflows at MKY Treuhandpartner GmbH, after contributing to scalable healthcare software at Pabau.",
                 items:[
+            {
+                company:"MKY Treuhandpartner GmbH",
+                position:"Full Stack Developer",
+                duration:"Jan 2026 – Present",
+                highlights:[
+                    "Angular, Node.js, REST APIs, MongoDB, and AWS",
+                    "AWS Textract / OCR invoice processing",
+                    "Role and permission management restructuring",
+                    "Full application redesign",
+                    "Invoice generator and invoice setup",
+                    "Backend/API development and integrations",
+                ],
+            },
             {
                 company:"Pabau Clinic Software",
                 position:"Full Stack Developer",
-                duration:"2023 - 2025",
+                duration:"2023 – 2025",
+                highlights:[
+                    "React, Next.js, GraphQL, Prisma, Node.js, MySQL, and PostgreSQL",
+                    "Reusable components, custom hooks, and helper functions",
+                    "Bridge APIs and middleware interceptors",
+                    "End-to-end tests with Playwright, code reviews, and intern mentoring",
+                ],
             }
          ]
     }
@@ -50,18 +69,21 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
     }
     const skills = {
         title:"My Skills",
-        description:"Skilled in React, Next.js, Node.js, GraphQL, Prisma, and SQL databases (MySQL & PostgreSQL), with a strong focus on writing clean, scalable, and maintainable code.",
+        description:"Skilled in Angular, React, Next.js, Node.js, REST APIs, GraphQL, Prisma, MongoDB, SQL databases (MySQL & PostgreSQL), and AWS, with a strong focus on writing clean, scalable, and maintainable code.",
         items:[
             {name:"HTML", icon:<FaHtml5 />},
             {name:"CSS", icon:<FaCss3 />},
             {name:"JavaScript", icon:<FaJs />},
             {name:"Typescript", icon:<SiTypescript />},
+            {name:"Angular", icon:<SiAngular />},
             {name:"React", icon:<FaReact />},
             {name:"Next.js", icon:<SiNextdotjs />},
             {name:"Node.js", icon:<FaNodeJs />},
+            {name:"MongoDB", icon:<SiMongodb />},
             {name:"PostgreSQL", icon:<SiPostgresql />},
             {name:"MySQL", icon:<SiMysql />},       
-            {name:"Graphql", icon:<SiGraphql />},       
+            {name:"Graphql", icon:<SiGraphql />},
+            {name:"AWS", icon:<FaAws />},
             {name:"Tailwind CSS", icon:<SiTailwindcss />},
         ]
     }
@@ -90,19 +112,24 @@ const Resume = () =>{
                      <div className="flex flex-col gap-[30px] text-center xl:text-left">
                             <h3 className="text-4xl font-bold">{experiences.title}</h3>
                             <p className="max-w-[600px] text-black/60 mx-auto xl:mx-0">{experiences.description}</p>
-                            <ScrollArea className="h-[400px]">
+                            <ScrollArea className="h-[520px]">
                             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                 {experiences.items.map((item,index)=>{
                                     return (
-                                        <li key={index} className="bg-sky-50 h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center
-                                        items-center lg:items-start gap-1
+                                        <li key={index} className="bg-sky-50 min-h-[184px] py-6 px-8 rounded-xl flex flex-col justify-center
+                                        items-center lg:items-start gap-2
                                         ">
                                             <span className="text-sky-500">{item.duration}</span>
-                                            <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+                                            <h3 className="text-xl max-w-[320px] text-center lg:text-left">{item.position}</h3>
                                             <div className="flex items-center gap-3">
                                                 <span className="w-[6px] h-[6px] rounded-full bg-sky-500"></span>
                                                 <p className="text-black/60">{item.company}</p>
                                             </div>
+                                            <ul className="mt-2 flex flex-col gap-1 text-sm text-black/60 text-center lg:text-left">
+                                                {item.highlights.map((highlight)=>{
+                                                    return <li key={highlight}>{highlight}</li>
+                                                })}
+                                            </ul>
                                         </li>
                                     )
                                 })}

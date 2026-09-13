@@ -7,11 +7,11 @@
         label:"Years of Experience"
     }
     ,{
-        num:4,
+        num:5,
         label:"Projects Completed"
     }
     ,{
-        num:11,
+        num:14,
         label:"Technologies I Work With"
     }
 ]
